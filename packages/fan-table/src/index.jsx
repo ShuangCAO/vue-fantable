@@ -640,11 +640,10 @@ export default {
         clickHighlight = rowStyleOption.clickHighlight
         stripe = rowStyleOption.stripe
       }
-      const clsStripe = clsName('stripe')
-      const rowHover = clsName('stripe')
+
       result = {
-        [clsStripe]: stripe === true, // 默认不开启
-        [rowHover]: hoverHighlight !== false, // 默认开启
+        [clsName('stripe')]: stripe === true, // 默认不开启
+        [clsName('row-hover')]: hoverHighlight !== false, // 默认开启
         [clsName('row-highlight')]: clickHighlight !== false, // 默认开启
       }
 
